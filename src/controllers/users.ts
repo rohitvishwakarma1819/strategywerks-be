@@ -20,3 +20,10 @@ export const getUsers = async (req: express.Request, res: express.Response) => {
     res.sendStatus(500);
   }
 };
+
+export const getUserCount = async (
+  req: express.Request,
+  res: express.Response
+) => {
+  res.json({ count: users.length });
+};
